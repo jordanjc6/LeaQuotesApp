@@ -1,0 +1,115 @@
+.quote-container {
+    height: 100%;
+    width: 50%;
+    background-color: white;
+    text-align: center;
+    display: inline-block;
+
+    button {
+        float: right;
+        color: white;
+        background-color: red;
+    }
+
+    input {
+        display: block;
+        margin: 1em auto 0.5em;
+        border: none;
+    }
+
+    input:focus {
+        outline: none;
+        box-shadow: 0 0 0 1px white;
+    }
+
+    .quote-title {
+        font-size: 1.75em;
+        text-align: center;
+        width: 10em;
+    }
+
+    .quote-context {
+        font-size: 1.2em;
+        width: 75%;
+        border: none;
+        resize: none;
+        overflow-y: scroll;
+        -ms-overflow-style: none; /* for Internet Explorer, Edge */
+        scrollbar-width: none; /* for Firefox */
+    }
+
+    .quote-context::-webkit-scrollbar {
+        display: none; /* for Chrome, Safari, and Opera */
+    }
+
+    .quote-context:focus {
+        outline: none;
+    }
+
+    .phrases-container {
+
+        .phrase {
+            background-color: #4B0082; 
+            width: max-content;
+            height: max-content;
+            max-width: 75%;
+            padding: 0.4em 0.2em;
+            margin: 1em auto;
+            border-radius: 1.2em;
+
+            input {
+                border: none;
+            }
+
+            input:focus {
+                outline: none;
+                box-shadow: 0 0 0 1px #4B0082;
+            }
+
+            .text {
+                background-color: #4B0082;
+                color: white;
+                font-size: larger;
+                border: none;
+                resize: none;
+                overflow-y: scroll;
+                -ms-overflow-style: none; /* for Internet Explorer, Edge */
+                scrollbar-width: none; /* for Firefox */
+            }
+
+            .text::-webkit-scrollbar {
+                display: none; /* for Chrome, Safari, and Opera */
+            }
+
+            .text:focus {
+                outline: none;
+            }
+
+            .speaker {
+                margin-left: 1em;
+                margin-top: auto;
+                margin-bottom: auto;
+                color: gold;
+                background-color: #4B0082;
+                font-size: larger;
+                text-align: center;
+                width: 4em;
+            }
+        } 
+    }
+}
+
+@media only screen and (max-width: 428px) {
+    .quote-container {
+        height: auto;
+        width: 100%;
+
+        .phrases-container {
+            .phrase {
+                .text {
+                    font-size: 1em;
+                }
+            }
+        }
+    }
+  }

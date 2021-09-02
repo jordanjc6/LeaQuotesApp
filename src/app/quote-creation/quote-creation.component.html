@@ -1,0 +1,23 @@
+<div class="container">
+    <h1>Create a Quote</h1>
+    <label for="quote-title">Title: </label>
+    <input id="quote-title" [(ngModel)]="quoteTitle" type="text">
+
+    <label for="quote-context">Context: </label>
+    <textarea id="quote-context" [(ngModel)]="quoteContext" type="text"></textarea>
+
+    <h3>Phrases:</h3>
+    <button class="add-btn" (click)="addPhrase()">+</button>
+    <button class="remove-btn" (click)="removePhrase()">-</button>
+
+    <div id="phrases">
+        <ng-container *ngFor="let count of phraseCounter">
+            <input class="speaker" type="text" placeholder="Speaker">
+            says:
+            <input class="text" type="text" placeholder="phrase...">
+            <br>
+        </ng-container>
+    </div>
+
+    <button class="create-btn" (click)="createQuote()">Create</button>
+</div>

@@ -1,0 +1,20 @@
+<div class="quote-container" *ngFor="let quote of quotes"> 
+    <button value="{{ quote.quoteid }}" (click)="deleteQuote(quote.quoteid)">X</button>
+    <input class="quote-title" value="{{ quote.title }}" (keydown.enter)="onEnterKeydown($event)" 
+        (keyup.enter)="updateQuote($event, quote.quoteid)">
+    <textarea class="quote-context" value="{{ quote.context }}" (keydown.enter)="onEnterKeydown($event)"
+        (keyup.enter)="updateQuote($event, quote.quoteid)">
+    </textarea>
+    <mat-list class="phrases-container">
+        <ng-container *ngFor="let phrase of phrases">
+            <mat-list-item class="phrase" *ngIf="quote.quoteid == phrase.quoteid">
+                <textarea class="text" value="{{ phrase.text }}" (keydown.enter)="onEnterKeydown($event)"
+                    cols="{{ phrase.text.length }}" rows="{{ phrase.text.length / 15 }}"
+                    (keyup.enter)="updatePhrase($event, phrase.phraseid)">
+                </textarea>
+                <input class="speaker" value="{{ phrase.speaker }}" (keydown.enter)="onEnterKeydown($event)"
+                 (keyup.enter)="updatePhrase($event, phrase.phraseid)">
+            </mat-list-item>
+        </ng-container>
+    </mat-list>
+</div>

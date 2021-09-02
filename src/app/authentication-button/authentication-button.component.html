@@ -1,0 +1,5 @@
+<login-button *ngIf="(auth.isAuthenticated$ | async) === false">
+</login-button>
+
+<logout-button *ngIf="auth.isAuthenticated$ | async">
+</logout-button>

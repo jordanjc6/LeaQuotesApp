@@ -1,0 +1,59 @@
+mat-sidenav-container {
+    height: 100%;
+
+    mat-sidenav {
+        text-align: center;
+        background-color: #E6E6FA;
+        
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                margin: 1.2em auto;
+            }
+
+            .link {
+                margin: 0;
+
+                button {
+                    border: none;
+                    padding: 0.5em;
+                    width: 100%;
+                    background-color: #E6E6FA;
+                    font-size: larger;
+                    transition: 0.25s;
+                }
+
+                button:hover {
+                    color: gold;
+                    background-color: #4B0082;
+                }
+
+                button:active {
+                    color: black;
+                    background-color: #E6E6FA;
+                }
+            }
+        }
+    }
+
+    mat-sidenav-content {
+        background-color: white;
+
+        #menu-button {
+            color: #4B0082;
+            position: fixed;
+            min-width: unset!important;
+            width: 10%;
+            display: none;
+            justify-content: center;
+        }
+    }
+}
+
+.clear-spacing {
+    margin: 0;
+    padding: 0;
+}

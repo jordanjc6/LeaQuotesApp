@@ -1,0 +1,146 @@
+.container {
+    width: 90%;
+    margin: 1.2em auto 0;
+    text-align: center;
+
+    label {
+        font-size: 1.25em;
+    }
+
+    input {
+        display: block;
+        margin: 0 auto 1.2em;
+    }
+
+    h3 {
+        font-size: 1.25em;
+        margin: 0;
+        padding: 0;
+    }
+
+    button {
+        margin: 0.3em;
+        color: white;
+        border-radius: 3em;
+        width: 1.5em;
+        height: 1.5em;
+        font-size: 1.5em;
+        transition: 0.25s;
+    }
+
+    .add-btn {
+        background-color: green;
+        border: 2px solid darkgreen;
+    }
+
+    .add-btn:hover {
+        background-color: white;
+        color: green;
+    }
+
+    .add-btn:active {
+        background-color: green;
+        color: white;
+        transition: 0.15s;
+    }
+
+    .remove-btn {
+        background-color: red;
+        border: 2px solid darkred;
+    }
+
+    .remove-btn:hover {
+        background-color: white;
+        color: red;
+    }
+
+    .remove-btn:active {
+        background-color: red;
+        color: white;
+        transition: 0.15s;
+    }
+
+    .create-btn {
+        color: black;
+        font-size: 1.25em;
+        width: 5em;
+    }
+
+    #quote-title {
+        font-size: 1.5em;
+        width: 10em;
+        border-radius: 1em;
+        padding: 0.25em 0.5em;
+        border: 1px solid black;
+    }
+
+    #quote-title:focus {
+        outline: none;
+        box-shadow: 0 0 0 1px black;
+    }
+
+    #quote-context {
+        font-size: 1.2em;
+        font-family: Arial;
+        height: 5em;
+        width: 15em;
+        resize: none;
+        display: block;
+        margin: 0 auto 1.2em; 
+        border-radius: 1em;
+        padding: 0.25em 0.5em;
+    }
+
+    #quote-context:focus {
+        outline: none;
+        box-shadow: 0 0 0 1px black;
+    }
+
+    #phrases {
+        margin-top: 1.2em;
+        font-size: larger;
+
+        input {
+            display: inline;
+            font-size: 1em;
+            border-radius: 1em;
+            padding: 0.25em 0.5em;
+            border: none;
+            background-color: #4B0082;
+        }
+
+        input::placeholder {
+            color: #E8E8E8;
+        }
+
+        input:focus {
+            outline: none;
+            box-shadow: 0 0 0 1px black;
+        }
+
+        .speaker {
+            margin-bottom: 0;
+            width: 4.5em;
+            color: gold;
+        }
+
+        .text {
+            width: 15em;
+            color: white;
+        }
+    }
+}
+
+@media only screen and (max-width: 428px) {
+    .container {
+        #phrases {
+            .speaker {
+                margin-bottom: 0.25em;
+            }
+
+            .text {
+                width: 10em;
+            }
+        }
+    }
+}

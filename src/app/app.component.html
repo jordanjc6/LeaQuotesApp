@@ -1,0 +1,20 @@
+<mat-sidenav-container>
+    <mat-sidenav #sidenav id="sidenav" [mode]="sidenav_mode" [(opened)] = "sidenav_opened">
+        <ul>
+            <li><h1 class="clear-spacing">Lea Quotes</h1></li>
+            <li><user-profile></user-profile></li>
+            <li><authentication-button></authentication-button></li>
+            <li><input type="text" placeholder="Search for a quote"></li>
+            <li class="link"><button routerLink="profile">Profile</button></li>
+            <li class="link"><button routerLink="quotes">Quotes</button></li>
+            <li class="link"><button routerLink="create">New Quote</button></li>
+        </ul>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <button mat-button id="menu-button" (click)="sidenav.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>
